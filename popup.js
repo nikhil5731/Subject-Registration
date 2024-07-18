@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const stopBtn = document.getElementById("stopButton");
 
   registerBtn.addEventListener("click", function () {
-    const courseName = "PULSE WIDTH MODULATION FOR POWER CONVERTERS";
-    const courseId = "EE419";
+    const courseName = "DATA STRUCTURES";
+    const courseId = "CO201";
     const frequency = 3000;
 
     chrome.runtime.sendMessage({
