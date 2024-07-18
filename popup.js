@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   registerBtn.addEventListener("click", function () {
     const courseName = "DATA STRUCTURES";
     const courseId = "CO201";
-    const frequency = 3000;
+    const frequency = 1500;
 
     chrome.runtime.sendMessage({
       action: "startApplying",
