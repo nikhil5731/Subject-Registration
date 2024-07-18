@@ -1,33 +1,23 @@
 {
-    "manifest_version": 3,
-    "name": "My Chrome Extension",
-    "version": "1.0",
-    "description": "A basic Chrome extension boilerplate",
-    "permissions": [
-      "activeTab",
-      "storage"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "icons": {
+  "manifest_version": 3,
+  "name": "HTML Fetcher",
+  "version": "1.0",
+  "description": "Fetches and displays the HTML of the clicked element.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "icon.png",
       "48": "icon.png",
       "128": "icon.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
   }
-  
+}
