@@ -5,6 +5,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const { courseName, courseId } = request;
 
     async function applyForCourse() {
+      stopFlag = false;
       let [tab] = await chrome.tabs.query({
         active: true,
         currentWindow: true,
@@ -54,7 +55,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
       if (changeInfo.status === "complete" && !stopFlag) {
-        console.log(stopFlag)
+        console.log(stopFlag);
         applyForCourse();
       }
     });
